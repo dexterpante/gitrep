@@ -1,0 +1,28 @@
+---
+title: "Git_Iris"
+author: "Dexter N. Pante"
+date: "2023-07-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+```
+
+My First Git Exercise
+```{r}
+library(tidyverse)
+library(plotly)
+library(ggplot2)
+
+data("iris")
+```
+
+
+```{r}
+p <- iris %>% ggplot( aes(x=Sepal.Width, y=Sepal.Length, color =Species)) + geom_point() 
+p <- ggplotly(p)
+p
+
+```
+
