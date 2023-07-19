@@ -28,6 +28,7 @@ p
 
 Recode Species
 ```{r}
-iris %>% mutate(My_cat = ifelse("setosa", 0, ifelse("versicolor", 1, 3)))
+iris %>% mutate(My_cat = ifelse(Species == "setosa", 0, 
+                                ifelse(Species == "versicolor", 1, 3)))
 ```
 
